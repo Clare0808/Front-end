@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Label Menu</title>
+    </head>
+
+    <body>
+        <div>
+            <span onclick="about();">About me.</span>
+            <span>&</span>
+            <span onclick="exps();">My education.</span>
+        </div>
+        <hr/>
+        <div id="about">Hi! I'm Clare.</div>
+        <div id="exps" style="display: none">I study in National Central University.</div>
+
+        <script>
+            function about(){
+                let element_about = document.querySelector("#about");
+                let element_exps= document.querySelector("#exps");
+
+                element_about.style.display = "block";
+                element_exps.style.display = "none";
+            }
+
+            function exps(){
+                let element_about = document.querySelector("#about");
+                let element_exps= document.querySelector("#exps");
+
+                element_about.style.display = "none";
+                element_exps.style.display = "block";
+            }
+        </script>
+    </body>
+</html>

@@ -19,7 +19,7 @@
 }
 .item{
     flex:none;
-    width:80px;
+    
     font-size: 25px;
     font-weight: bold;
     color:white;
@@ -37,6 +37,18 @@
     width: 30px;
     height: 30px;
 }
+.mobile-menu-sign-frame{
+    display: none;
+    justify-content: center;
+    width: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.mobile-menu-sign{
+    flex: none;
+    margin: 10px;
+}
 .word-box{
     flex:none;
     width: 45%;
@@ -51,6 +63,39 @@
 .content{
     font-size: 20px;
     color:white;
+}
+.title-about-1{
+    display: none;
+    color:white;
+    font-size: 50px;
+}
+.content-about-1{
+    display: none;
+    color:white;
+    font-size: 20px;
+}
+.title-about-2{
+    display: none;
+    color:white;
+    font-size: 50px;
+    margin-top: 20px;
+}
+.content-about-2{
+    display: none;
+    color:white;
+    font-size: 20px;
+}
+.content-contact-1{
+    display: none;
+    color:white;
+    font-size: 50px;
+    margin-top: 20px;
+}
+.content-contact-2{
+    display: none;
+    color:white;
+    font-size: 50px;
+    margin-top: 20px;
 }
 .cat{
     display: none;
@@ -78,8 +123,33 @@
     .content{
         text-align: center;
     }
+    .title-about-1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .content-about-1{
+        text-align: center;   
+    }
+    .title-about-2{
+        font-size: 25px;
+        text-align: center;
+    }
+    .content-about-2{
+        text-align: center;
+    }
+    .content-contact-1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .content-contact-2{
+        font-size: 25px;
+        text-align: center;
+    }
     .menu{
         display: none;
+    }
+    .item{
+        width: 0px;
     }
     .mobile-menu{
         display: block;

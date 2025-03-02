@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Javascript Object</title>
+    </head>
+    <body>
+        <script>
+            let man = new Object();
+            man.age = 18;
+            man.name = "John";
+            man.talk = function(){
+                console.log("Hi! I'm", this.name, ".");  
+            }
+            console.log(man);
+            console.log(man.age >= 18);
+            man.talk();
+
+            let woman = {
+                age : 15, 
+                name : "Alice", 
+                talk : function(){
+                    console.log("Hi! I'm", this.name, "."); 
+                }
+            };
+            console.log(woman);
+            console.log(woman.age >= 18);
+            woman.talk();
+        </script>
+    </body>
+</html>

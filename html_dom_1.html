@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>HTML DOM</title>
+    </head>
+    <body>
+        <script>
+            console.log(window);
+            console.log(window.innerWidth, window.innerHeight);
+            console.log(window.screen.width, window.screen.height);
+            console.log(window.location.href);
+
+            //window.location.href = "https://www.google.com/";
+
+            console.log(window.document);
+            console.dir(document); // The presentation looks more like program.
+            console.log(document.title);
+
+            console.log(document.body.innerHTML); // Get the content of the label
+            document.body.innerHTML = "Hi!";
+        </script>
+    </body>
+</html>

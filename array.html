@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Javascript Array</title>
+    </head>
+    <body>
+        <script>
+            let math_grades = [];
+            math_grades.push(70);
+            math_grades.push(80);
+            math_grades.push(60);
+            console.log(math_grades);
+
+            let chinese_grades = [70, 80, 60];
+            chinese_grades.push(90);
+            console.log(chinese_grades);
+            console.log(chinese_grades[0]);
+            console.log(chinese_grades[1]);
+            console.log(chinese_grades[2]);
+            console.log(chinese_grades[3]);
+            console.log(chinese_grades.length);
+
+            let sum = 0;
+            for(let index = 0; index < chinese_grades.length; index ++){
+                console.log(chinese_grades[index]);
+                sum += chinese_grades[index];
+            }
+            console.log(sum);
+            console.log(sum/chinese_grades.length)
+        </script>
+    </body>
+</html>

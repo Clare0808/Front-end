@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>HTML DOM</title>
+        <style>
+            .text{
+                text-decoration: underline;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>HTML DOM</h3>
+        <div id="content">Practice how to operate the screen of the web.</div>
+        <button onclick="change();">Click</button>
+
+        <script>
+            function change(){
+                let div_element = document.querySelector("#content");
+                div_element.innerHTML = "New content.";
+                div_element.className = "text";
+                div_element.style.fontSize = "30px";
+                div_element.style.color = "red";
+            }
+        </script>
+    </body>
+</html>

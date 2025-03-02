@@ -10,25 +10,165 @@
     <body background="https://10wallpaper.com/wallpaper/1366x768/1501/Black_Cat-Animal_Widescreen_Wallpaper_1366x768.jpg">
         <div class="ban">
             <div class="mobile-menu-frame">
-                <img class="mobile-menu" src="C:\Users\User\Documents\Self Practice\Front end\menu.png"/>
+                <img class="mobile-menu" src="C:\Users\User\Documents\Self Practice\Front end\menu.png" onclick="show_mobile_menu();"/>
+                <div class="mobile-menu-sign-frame" id="frame">
+                    <div class="mobile-menu-sign" id="option1" onclick="click_home();">Home</div>
+                    <div class="mobile-menu-sign" id="option2" onclick="click_about();">About</div>
+                    <div class="mobile-menu-sign" id="option3" onclick="click_contact();">Content</div>
+                </div>
             </div>
             <div class="picture-frame">
-                <img class="picture" src="C:\Users\User\Documents\Self Practice\Front end\Clare.png"/>
+                <img class="picture" src="C:\Users\User\Documents\Self Practice\Front end\Clare.png" id="picture"/>
             </div>
             <div class="menu">
-                <div class="item">Home</div>
-                <div class="item">About</div>
-                <div class="item">Contact</div>
+                <div class="item" onclick="click_home();" id="home">Home</div>
+                <div class="item" onclick="click_about();" id="about">About</div>
+                <div class="item" onclick="click_contact();" id="contact">Contact</div>
             </div>
         </div>
         <div class="introduction">
             <div class="word-box">
-                <div class="title">Hi! I'm Clare.</div>
-                <div class="content">I am a student of the National Central University, and major in the Department of Information Management. I like to learn how to write code, such as Python, C, C++ and Java. Additionally, I am also learning how to build a website these days.</div> 
+                <div class="title" id="title">Hi! I'm Clare.</div>
+                <div class="content" id="content">I am a student of the National Central University, and major in the Department of Information Management. I like to learn how to write code, such as Python, C, C++ and Java. Additionally, I am also learning how to build a website these days.</div> 
+                <div class="title-about-1" id="title_about_1">I have learned ...</div>
+                <div class="content-about-1" id="content_about_1">Python, C, C++, Java, and Excel.</div>
+                <div class="title-about-2" id="title_about_2">Now I'm learning ...</div>
+                <div class="content-about-2" id="content_about_2">HTML, CSS and JavaScripte.</div>
+                <a class="content-contact-1" id="content_contact_1" href="https://www.facebook.com/">My FaceBook.</a>
+                <a class="content-contact-2" id="content_contact_2" href="https://www.instagram.com/">My Instagram.</a>
             </div>
         </div>
         <div class="cat-frame">
             <img class="cat" src="C:\Users\User\Documents\Self Practice\Front end\cat.png"/>
         </div>
+
+        <script>
+            let times = 0;
+
+            function show_mobile_menu(){
+                times ++;
+                console.log(times);
+
+                let div_elem_frame = document.querySelector("#frame");
+                let div_elem_picture = document.querySelector("#picture");
+                let div_elem_option_1 = document.querySelector("#option1");
+                let div_elem_option_2 = document.querySelector("#option2");
+                let div_elem_option_3 = document.querySelector("#option3");
+
+                if(times % 2 == 1){
+                    div_elem_frame.style.display = "block";
+                    div_elem_picture.style.display = "none";
+                    
+                    div_elem_option_1.style.fontSize = "25px";
+                    div_elem_option_1.style.fontWeight = "bold";
+                    div_elem_option_1.style.color = "white";
+                    
+                    div_elem_option_2.style.fontSize = "25px";
+                    div_elem_option_2.style.fontWeight = "bold";
+                    div_elem_option_2.style.color = "white";
+
+                    div_elem_option_3.style.fontSize = "25px";
+                    div_elem_option_3.style.fontWeight = "bold";
+                    div_elem_option_3.style.color = "white";
+                }else{
+                    div_elem_frame.style.display = "none";
+                    div_elem_picture.style.display = "block";
+                }
+            }
+
+            function click_home(){
+                let div_elem_home = document.querySelector("#home");
+                let div_elem_about = document.querySelector("#about");
+                let div_elem_contact = document.querySelector("#contact");
+                let div_elem_title = document.querySelector("#title");
+                let div_elem_content = document.querySelector("#content");
+                let div_elem_title_about_1 = document.querySelector("#title_about_1");
+                let div_elem_content_about_1 = document.querySelector("#content_about_1");
+                let div_elem_title_about_2 = document.querySelector("#title_about_2");
+                let div_elem_content_about_2 = document.querySelector("#content_about_2");
+                let div_elem_content_contact_1 = document.querySelector("#content_contact_1");
+                let div_elem_content_contact_2 = document.querySelector("#content_contact_2");
+                let div_elem_option_1 = document.querySelector("#option1");
+                let div_elem_option_2 = document.querySelector("#option2");
+                let div_elem_option_3 = document.querySelector("#option3");
+
+                div_elem_home.style.background = "white";
+                div_elem_home.style.color = "black";
+                div_elem_about.style.background = "black";
+                div_elem_about.style.color = "white"
+                div_elem_contact.style.background = "black";
+                div_elem_contact.style.color = "white";
+
+                div_elem_title.style.display = "block";
+                div_elem_content.style.display = "block";
+                div_elem_title_about_1.style.display = "none";
+                div_elem_content_about_1.style.display = "none";
+                div_elem_title_about_2.style.display = "none";
+                div_elem_content_about_2.style.display = "none";
+                div_elem_content_contact_1.style.display = "none";
+                div_elem_content_contact_2.style.display = "none";
+            }
+            
+            function click_about(){
+                let div_elem_home = document.querySelector("#home");
+                let div_elem_about = document.querySelector("#about");
+                let div_elem_contact = document.querySelector("#contact");
+                let div_elem_title = document.querySelector("#title");
+                let div_elem_content = document.querySelector("#content");
+                let div_elem_title_about_1 = document.querySelector("#title_about_1");
+                let div_elem_content_about_1 = document.querySelector("#content_about_1");
+                let div_elem_title_about_2 = document.querySelector("#title_about_2");
+                let div_elem_content_about_2 = document.querySelector("#content_about_2");
+                let div_elem_content_contact_1 = document.querySelector("#content_contact_1");
+                let div_elem_content_contact_2 = document.querySelector("#content_contact_2");
+
+                div_elem_home.style.background = "black";
+                div_elem_home.style.color = "white";
+                div_elem_about.style.background = "white";
+                div_elem_about.style.color = "black"
+                div_elem_contact.style.background = "black";
+                div_elem_contact.style.color = "white";
+
+                div_elem_title.style.display = "none";
+                div_elem_content.style.display = "none";
+                div_elem_title_about_1.style.display = "block";
+                div_elem_content_about_1.style.display = "block";
+                div_elem_title_about_2.style.display = "block";
+                div_elem_content_about_2.style.display = "block";
+                div_elem_content_contact_1.style.display = "none";
+                div_elem_content_contact_2.style.display = "none";
+
+            }
+
+            function click_contact(){
+                let div_elem_home = document.querySelector("#home");
+                let div_elem_about = document.querySelector("#about");
+                let div_elem_contact = document.querySelector("#contact");
+                let div_elem_title = document.querySelector("#title");
+                let div_elem_content = document.querySelector("#content");
+                let div_elem_title_about_1 = document.querySelector("#title_about_1");
+                let div_elem_content_about_1 = document.querySelector("#content_about_1");
+                let div_elem_title_about_2 = document.querySelector("#title_about_2");
+                let div_elem_content_about_2 = document.querySelector("#content_about_2");
+                let div_elem_content_contact_1 = document.querySelector("#content_contact_1");
+                let div_elem_content_contact_2 = document.querySelector("#content_contact_2");
+
+                div_elem_home.style.background = "black";
+                div_elem_home.style.color = "white";
+                div_elem_about.style.background = "black";
+                div_elem_about.style.color = "white"
+                div_elem_contact.style.background = "white";
+                div_elem_contact.style.color = "black";
+
+                div_elem_title.style.display = "none";
+                div_elem_content.style.display = "none";
+                div_elem_title_about_1.style.display = "none";
+                div_elem_content_about_1.style.display = "none";
+                div_elem_title_about_2.style.display = "none";
+                div_elem_content_about_2.style.display = "none";
+                div_elem_content_contact_1.style.display = "block";
+                div_elem_content_contact_2.style.display = "block";
+            }
+        </script>
     </body>
 </html>
