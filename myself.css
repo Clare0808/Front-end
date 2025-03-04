@@ -3,7 +3,7 @@
 }
 .picture-frame{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 .picture{
     flex: none;
@@ -19,11 +19,12 @@
 }
 .item{
     flex:none;
-    
     font-size: 25px;
     font-weight: bold;
     color:white;
     margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
     text-align:center;
     display:block;
 }
@@ -40,10 +41,17 @@
 .mobile-menu-sign-frame{
     display: none;
     justify-content: center;
-    width: 500px;
+    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
+}
+.mobile-menu-sign{
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+    padding: 8px;
+    border-radius: 5px;
 }
 .mobile-menu-sign{
     flex: none;
