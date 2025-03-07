@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Flower Shop</title>
+        <link rel="stylesheet" type="text/css" href="flower.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    </head>
+    
+    <body id="body">
+        <div class="ban">
+            <div class="mark">Flower</div>
+            <div class="function">
+                <div class="option" id="home" onmouseover="over_home();" onmouseout="out_home();" onclick="click_home();">Home</div>
+                <div class="option" id="about" onmouseover="over_about();" onmouseout="out_about();" onclick="click_about();">About</div>
+                <div class="option" id="product" onmouseover="over_product();" onmouseout="out_product();">Products</div>
+                <div class="option" id="review" onmouseover="over_review();" onmouseout="out_review();">Review</div>
+                <div class="option" id="contact" onmouseover="over_contact();" onmouseout="out_contact();">Contact</div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-heart" style="padding: 8px; color: #272727" id="heart" onmouseover="over_heart();" onmouseout="out_heart();"></i>
+                <i class="fa-solid fa-cart-shopping" style="padding: 8px; color: #272727" id="cart" onmouseover="over_cart();" onmouseout="out_cart();"></i>
+                <i class="fa-solid fa-user" style="padding: 8px; color: #272727" id="user" onmouseover="over_user();" onmouseout="out_user();"></i>
+            </div>
+        </div>
+        <div class="word-box" id="word-box">
+            <div class="title-1" id="title-1">Fresh Flowers</div>
+            <div class="title-2" id="title-2">Natural & Beautiful Flowers</div>
+            <div class="content" id="content">Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...</div>
+        </div>
+        <div class="shop" id="shop" onmouseover="over_shop();" onmouseout="out_shop();">Shop Now</div>
+        
+        <div class="about" id="about-us"> 
+            <div class="alone-us"> <span class="alone-about">About </span> Us </div>
+        </div>
+        <div class="picture-frame">
+            <img class="picture" id="picture" src="https://s.widget-club.com/images/YyiR86zpwIMIfrCZoSs4ulVD9RF3/c241de82f86b57b6115f72a5f0ce1950/3b81ed5960aaa0aca4df661d98e8d6c2.jpg?q=70&w=500"/>
+            <div class="word-in-picture" id="word-in-picture">Best Flower Sellers</div>
+        </div>
+
+        <script>
+            let div_elem_body = document.querySelector("#body");
+
+            let div_elem_shop = document.querySelector("#shop");
+
+            let div_elem_home = document.querySelector("#home");
+            let div_elem_about = document.querySelector("#about");
+            let div_elem_product = document.querySelector("#product");
+            let div_elem_review = document.querySelector("#review");
+            let div_elem_contact = document.querySelector("#contact");
+
+            let div_elem_heart = document.querySelector("#heart");
+            let div_elem_cart = document.querySelector("#cart");
+            let div_elem_user = document.querySelector("#user");
+
+            let div_elem_word_box = document.querySelector("#word-box");
+            let div_elem_title_1 = document.querySelector("#title-1");
+            let div_elem_title_2 = document.querySelector("#title-2");
+            let div_elem_content = document.querySelector("#content");
+
+            let div_elem_about_us = document.querySelector("#about-us");
+            let div_elem_picture = document.querySelector("#picture");
+            let div_elem_word_in_picture = document.querySelector("#word-in-picture");
+
+            function over_shop(){
+                div_elem_shop.style.background = "#FF79BC";
+            }
+            function out_shop(){
+                div_elem_shop.style.background = "#272727"
+            }
+
+            function over_home(){
+                div_elem_home.style.color = "#FF79BC";
+            }
+            function out_home(){
+                div_elem_home.style.color = "#8E8E8E"
+            }
+
+            function over_about(){
+                div_elem_about.style.color = "#FF79BC";
+            }
+            function out_about(){
+                div_elem_about.style.color = "#8E8E8E"
+            }
+
+            function over_product(){
+                div_elem_product.style.color = "#FF79BC";
+            }
+            function out_product(){
+                div_elem_product.style.color = "#8E8E8E"
+            }
+
+            function over_review(){
+                div_elem_review.style.color = "#FF79BC";
+            }
+            function out_review(){
+                div_elem_review.style.color = "#8E8E8E"
+            }
+
+            function over_contact(){
+                div_elem_contact.style.color = "#FF79BC";
+            }
+            function out_contact(){
+                div_elem_contact.style.color = "#8E8E8E"
+            }
+
+            function over_heart(){
+                div_elem_heart.style.color = "#FF79BC";
+            }
+            function out_heart(){
+                div_elem_heart.style.color = "#272727"
+            }
+
+            function over_cart(){
+                div_elem_cart.style.color = "#FF79BC";
+            }
+            function out_cart(){
+                div_elem_cart.style.color = "#272727"
+            }
+
+            function over_user(){
+                div_elem_user.style.color = "#FF79BC";
+            }
+            function out_user(){
+                div_elem_user.style.color = "#272727"
+            }
+
+            function click_about(){
+                div_elem_body.style.background = "#FFFFFF";
+                div_elem_title_1.style.display = "none";
+                div_elem_title_2.style.display = "none";
+                div_elem_content.style.display = "none";
+                div_elem_shop.style.display = "none";
+
+                div_elem_word_box.style.marginTop = "0";
+
+                div_elem_about_us.style.display = "flex";
+                div_elem_about_us.style.marginTop = "8%";
+
+                div_elem_picture.style.display = "block";
+                div_elem_word_in_picture.style.display = "block";
+                
+            }
+
+        </script>
+    </body>
+    
+</html>
