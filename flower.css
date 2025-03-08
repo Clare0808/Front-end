@@ -189,7 +189,7 @@ body{
     height: 6%;
     background-color: #FF60AF;
     position: absolute;
-    top: 81.6%;
+    top: 80%;
     left: 8.4%;
     transform: translateY(-50%);
     display: none;
@@ -201,7 +201,7 @@ body{
     height: 6%;
     background-color: #FF60AF;
     position: absolute;
-    top: 81.6%;
+    top: 80%;
     left: 37.5%;
     transform: translateY(-50%);
     display: none;
@@ -213,7 +213,7 @@ body{
     height: 6%;
     background-color: #FF60AF;
     position: absolute;
-    top: 81.6%;
+    top: 80%;
     left: 66.7%;
     transform: translateY(-50%);
     display: none;
@@ -241,7 +241,7 @@ body{
     height: 6%;
     background-color: #FF60AF;
     position: absolute;
-    top: 153%;
+    top: 151%;
     left: 8.4%;
     transform: translateY(-50%);
     display: none;
@@ -253,7 +253,7 @@ body{
     height: 6%;
     background-color: #FF60AF;
     position: absolute;
-    top: 153%;
+    top: 151%;
     left: 37.5%;
     transform: translateY(-50%);
     display: none;
@@ -265,7 +265,7 @@ body{
     height: 6%;
     background-color: #FF60AF;
     position: absolute;
-    top: 153%;
+    top: 151%;
     left: 66.7%;
     transform: translateY(-50%);
     display: none;
@@ -290,16 +290,86 @@ body{
 }
 .review-frame{
     display: none;
-    margin-top: 4%;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
-.review-1{
+.review-below{
     width: 30%;
-    margin-left: 4.5%;
-    margin-right: 4.5%;
+    margin: 2%;
     box-shadow: 0px 0px 5px 3px #D0D0D0;
+}
+.satisfaction{
+    display: flex;
+    align-items: center;
 }
 .review-content{
     color: #8E8E8E;
     font-size: 20px;
+    padding: 20px;   
+}
+.customer{
+    display: flex;
+    align-items: center;
+}
+.customer-picture{
+    flex: none;
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    border-radius: 100%;
+}
+.customer-information{
+    padding: 10px;
+}
+.review-customer-name{
+    color: #272727;
+    font-size: 25px;
+    font-weight: bold;
+}
+.review-customer-who{
+    color: #8E8E8E;
+    font-size: 20px;   
+}
+.contact{
+    display: none; 
+    justify-content: center;
+    width: 91%;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #FFD9EC;
+    margin-left: 4.5%;
+    margin-right: 4.5%;
+}
+.alone-us-con{
+    color: #272727;
+}
+.alone-contact{
+    color: #FF60AF;
+}
+.input-name{
+    display: none;
+    width: 30%;
+    height: 25px;
+    margin-top: 4%;
+    margin-left: 4.5%;
+    margin-bottom: 10px;
+    border-color: (#FF60AF);
+}
+.input{
+    display: none;
+    width: 30%;
+    height: 25px;
+    margin-top: 15px;
+    margin-left: 4.5%;
+    margin-bottom: 10px;
+}
+.input-ms{
+    display: none;
+    width: 30%;
+    height: 120px;
+    margin-left: 4.5%;
+    margin-bottom: 10px;
     
 }
