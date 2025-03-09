@@ -9,7 +9,8 @@
     </head>
     
     <body id="body">
-        <div class="ban">
+        <div class="ban" id="ban">
+            <img class="mobile-menu" src="https://image1.gamme.com.tw/news2/2020/23/34/qJeRpp_WmKGWrqc.jpg" onclick="show_mobile_menu();"/>
             <div class="mark">Flower</div>
             <div class="function">
                 <div class="option" id="home" onmouseover="over_home();" onmouseout="out_home();" onclick="click_home();">Home</div>
@@ -24,6 +25,16 @@
                 <i class="fa-solid fa-user" style="padding: 8px; color: #272727" id="user" onmouseover="over_user();" onmouseout="out_user();"></i>
             </div>
         </div>
+        <div class="mobile-menu-frame">
+            <div class="mobile-menu-option" id="mobile-menu-option">
+                <div class="mobile-option" id="option-1" onmouseover="over_mobile_home();" onmouseout="out_mobile_home();" onclick="click_home();">Home</div>
+                <div class="mobile-option" id="option-2" onmouseover="over_mobile_about();" onmouseout="out_mobile_about();" onclick="click_about();">About</div>
+                <div class="mobile-option" id="option-3" onmouseover="over_mobile_product();" onmouseout="out_mobile_product();" onclick="click_product();">Products</div>
+                <div class="mobile-option" id="option-4" onmouseover="over_mobile_review();" onmouseout="out_mobile_review();" onclick="click_review();">Review</div>
+                <div class="mobile-option" id="option-5" onmouseover="over_mobile_contact();" onmouseout="out_mobile_contact();" onclick="click_contact();">Contact</div>
+            </div>
+        </div>
+
         <div class="word-box" id="word-box">
             <div class="title-1" id="title-1">Fresh Flowers</div>
             <div class="title-2" id="title-2">Natural & Beautiful Flowers</div>
@@ -174,13 +185,23 @@
             <div class="alone-us-con"> <span class="alone-contact">Contact </span> Us </div>
         </div>
         <form action="/test.aspx" method="post">
-            <input class="input-name" id="input-name" type="text" placeholder="name">
-            <input class="input" id="input-email" type="text" placeholder="email">
-            <input class="input" id="input-num" type="number" placeholder="number">
-            <input class="input-ms" id="input-ms" type="text" placeholder="message">
+            <div class="contact-content" id="contact-content">
+                <div class="input-frame" id="input-frame">
+                    <input class="input" id="input-name" type="text" placeholder="name">
+                    <input class="input" id="input-email" type="email" placeholder="email">
+                    <input class="input" id="input-num" type="number" placeholder="number">
+                    <input class="input-ms" id="input-ms" type="text" placeholder="message">
+                    <div class="send" id="send" onmouseover="over_send();" onmouseout="out_send();">Send Message</div>
+                </div>
+                <img class="water-flower" src="https://img.soundofhope.org/2022-10/watering-2389940_1280_fotor-1666220416520.jpg"/>
+            </div>    
 
         <script>
+            let times = 0;
+            
             let div_elem_body = document.querySelector("#body");
+
+            let div_elem_ban = document.querySelector("#ban");
 
             let div_elem_shop = document.querySelector("#shop");
 
@@ -237,10 +258,17 @@
             let div_elem_review_frame = document.querySelector("#review-frame");
 
             let div_elem_contact_us = document.querySelector("#contact-us");
-            let div_elem_input_name = document.querySelector("#input-name");
-            let div_elem_input_email = document.querySelector("#input-email");
-            let div_elem_input_num = document.querySelector("#input-num");
-            let div_elem_input_ms = document.querySelector("#input-ms");
+            let div_elem_contact_content = document.querySelector("#contact-content");
+
+            let div_elem_send = document.querySelector("#send");
+
+            let div_elem_mobile_menu_option = document.querySelector("#mobile-menu-option");
+
+            let div_elem_option_1 = document.querySelector("#option-1");
+            let div_elem_option_2 = document.querySelector("#option-2");
+            let div_elem_option_3 = document.querySelector("#option-3");
+            let div_elem_option_4 = document.querySelector("#option-4");
+            let div_elem_option_5 = document.querySelector("#option-5");
 
 
             function over_shop(){
@@ -316,7 +344,7 @@
                 div_elem_word_box.style.marginTop = "0";
 
                 div_elem_about_us.style.display = "flex";
-                div_elem_about_us.style.marginTop = "8%";
+                div_elem_about_us.style.marginTop = "110px";
 
                 div_elem_picture_frame.style.display = "flex"; 
                 
@@ -328,10 +356,7 @@
                 div_elem_review_frame.style.display = "none";
 
                 div_elem_contact_us.style.display = "none";
-                div_elem_input_name.style.display = "none";
-                div_elem_input_email.style.display = "none";
-                div_elem_input_num.style.display = "none";
-                div_elem_input_ms.style.display = "none";
+                div_elem_contact_content.style.display = "none";
             }
 
             function over_learn(){
@@ -362,10 +387,7 @@
                 div_elem_review_frame.style.display = "none";
 
                 div_elem_contact_us.style.display = "none";
-                div_elem_input_name.style.display = "none";
-                div_elem_input_email.style.display = "none";
-                div_elem_input_num.style.display = "none";
-                div_elem_input_ms.style.display = "none";
+                div_elem_contact_content.style.display = "none";
             }
 
             function click_product(){
@@ -380,7 +402,7 @@
 
                 div_elem_word_box.style.marginTop = "0";
                 div_elem_least_product.style.display = "flex";
-                div_elem_least_product.style.marginTop = "8%";
+                div_elem_least_product.style.marginTop = "110px";
                 div_elem_product_frame_1.style.display = "flex";
                 div_elem_product_frame_2.style.display = "flex";
 
@@ -388,10 +410,7 @@
                 div_elem_review_frame.style.display = "none";
 
                 div_elem_contact_us.style.display = "none";
-                div_elem_input_name.style.display = "none";
-                div_elem_input_email.style.display = "none";
-                div_elem_input_num.style.display = "none";
-                div_elem_input_ms.style.display = "none";
+                div_elem_contact_content.style.display = "none";
             }
 
             function over_flower_1(){
@@ -579,14 +598,11 @@
 
                 div_elem_word_box.style.marginTop = "0";
                 div_elem_customer_review.style.display = "flex";
-                div_elem_customer_review.style.marginTop = "8%";
+                div_elem_customer_review.style.marginTop = "110px";
                 div_elem_review_frame.style.display = "flex";
 
                 div_elem_contact_us.style.display = "none";
-                div_elem_input_name.style.display = "none";
-                div_elem_input_email.style.display = "none";
-                div_elem_input_num.style.display = "none";
-                div_elem_input_ms.style.display = "none";
+                div_elem_contact_content.style.display = "none";
             }
 
             function click_contact(){
@@ -608,11 +624,63 @@
 
                 div_elem_word_box.style.marginTop = "0";
                 div_elem_contact_us.style.display = "flex";
-                div_elem_contact_us.style.marginTop = "8%";
-                div_elem_input_name.style.display = "block";
-                div_elem_input_email.style.display = "block";
-                div_elem_input_num.style.display = "block";
-                div_elem_input_ms.style.display = "block";
+                div_elem_contact_us.style.marginTop = "110px";
+                div_elem_contact_content.style.display = "flex";
+            }
+
+            function over_send(){
+                div_elem_send.style.background = "#FF79BC";
+            }
+            function out_send(){
+                div_elem_send.style.background = "#272727"
+            }
+
+            function show_mobile_menu(){
+                times ++;
+                console.log(times);
+                
+                if(times % 2 == 1){
+                    div_elem_mobile_menu_option.style.display = "block";
+                    div_elem_ban.style.boxShadow = "0 0 0 0 #FFFFFF";
+                }else{
+                    div_elem_mobile_menu_option.style.display = "none";
+                    div_elem_ban.style.boxShadow = "5px 5px 5px 5px #0005";
+                }
+            }
+
+            function over_mobile_home(){
+                div_elem_option_1.style.border = "1px #FF60AF solid";
+            }
+            function out_mobile_home(){
+                div_elem_option_1.style.border = "1px #8E8E8E solid";
+            }
+
+            function over_mobile_about(){
+                div_elem_option_2.style.border = "1px #FF60AF solid";
+            }
+            function out_mobile_about(){
+                div_elem_option_2.style.border = "1px #8E8E8E solid";
+            }
+
+            function over_mobile_product(){
+                div_elem_option_3.style.border = "1px #FF60AF solid";
+            }
+            function out_mobile_product(){
+                div_elem_option_3.style.border = "1px #8E8E8E solid";
+            }
+
+            function over_mobile_review(){
+                div_elem_option_4.style.border = "1px #FF60AF solid";
+            }
+            function out_mobile_review(){
+                div_elem_option_4.style.border = "1px #8E8E8E solid";
+            }
+
+            function over_mobile_contact(){
+                div_elem_option_5.style.border = "1px #FF60AF solid";
+            }
+            function out_mobile_contact(){
+                div_elem_option_5.style.border = "1px #8E8E8E solid";
             }
         </script>
     </body>
