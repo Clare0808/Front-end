@@ -94,11 +94,11 @@ body{
 .picture{
     justify-content: center;
     align-items: center;
-    width: 605px;
+    width: 45%;
     height: 23%;
     margin-top: 4%;
     margin-left: 4.5%;
-    z-index: 18;
+    z-index: 1;
     position: relative;
 }
 .word-in-picture{
@@ -107,10 +107,10 @@ body{
     font-size: 50px;
     font-weight: bold;
     text-align: center;
-    z-index: 19;
+    z-index: 2;
     position: absolute;
-    top: 380px;
-    left: 60px;
+    top: 58%;
+    left: 5%;
     transform: translateY(-50%);
     mix-blend-mode: screen;
     background-color: #FFFFFF;
@@ -468,7 +468,10 @@ body{
         margin-left: 0;
     }
     .word-in-picture{
+        font-size: 40px;
         width: 70%;
+        top: 52%;
+        left: 15%;
     }
     .word-box-beside-picture{
         width: 70%;
@@ -542,5 +545,36 @@ body{
         width: 70%;
         margin-top: 20px;
         margin-left: 0;
+    }
+    .picture-frame{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .picture{
+        width: 70%;
+        margin-left: 0;
+    }
+    .word-in-picture{
+        font-size: 30px;
+        width: 70%;
+        top: 38%;
+        left: 15%;
+    }
+    .word-box-beside-picture{
+        width: 70%;
+    }
+    .title-beside-picture{
+        font-size: 30px;
+    }
+    .word-beside-picture-1{
+        font-size: 15px;
+    }
+    .word-beside-picture-2{
+        font-size: 15px;
+    }
+    .learn{
+        width: 60px;
+        height: 12px;
+        font-size: 10px;
     }
 }
