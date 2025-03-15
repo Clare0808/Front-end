@@ -9,6 +9,8 @@
     </head>
     
     <body id="body">
+
+        <!--the banner of the website-->
         <div class="ban" id="ban">
             <img class="mobile-menu" src="https://image1.gamme.com.tw/news2/2020/23/34/qJeRpp_WmKGWrqc.jpg" onclick="show_mobile_menu();"/>
             <div class="mark">Flower</div>
@@ -25,6 +27,7 @@
                 <i class="fa-solid fa-user" style="padding: 8px; color: #272727" id="user" onmouseover="over_user();" onmouseout="out_user();"></i>
             </div>
         </div>
+        <!--the mobile menu of the web-->
         <div class="mobile-menu-frame">
             <div class="mobile-menu-option" id="mobile-menu-option">
                 <div class="mobile-option" id="option-1" onmouseover="over_mobile_home();" onmouseout="out_mobile_home();" onclick="click_home();">Home</div>
@@ -35,6 +38,7 @@
             </div>
         </div>
 
+        <!--the content in the home page-->
         <div class="word-box" id="word-box">
             <div class="title-1" id="title-1">Fresh Flowers</div>
             <div class="title-2" id="title-2">Natural & Beautiful Flowers</div>
@@ -42,6 +46,7 @@
         </div>
         <div class="shop" id="shop" onmouseover="over_shop();" onmouseout="out_shop();">Shop Now</div>
         
+        <!--the content in the "about us" page-->
         <div class="about" id="about-us"> 
             <div class="alone-us"> <span class="alone-about">About </span> Us </div>
         </div>
@@ -56,6 +61,7 @@
             </div>
         </div>
 
+        <!--the content in the product page-->
         <div class="product" id="least-product"> 
             <div class="alone-product"> <span class="alone-least">Least </span> Products </div>
         </div>
@@ -124,6 +130,7 @@
             </div>
         </div>
 
+        <!--the content in the review page-->
         <div class="review" id="customer-review"> 
             <div class="alone-review"> <span class="alone-customer">Customer's </span> Review </div>
         </div>
@@ -181,6 +188,7 @@
             </div>
         </div>
 
+        <!--the content in the contact page-->
         <div class="contact" id="contact-us"> 
             <div class="alone-us-con"> <span class="alone-contact">Contact </span> Us </div>
         </div>
@@ -197,7 +205,7 @@
             </div>    
 
         <script>
-            let times = 0;
+            let times = 0; // a counter to record the times that the menu button is clicked
             
             let div_elem_body = document.querySelector("#body");
 
