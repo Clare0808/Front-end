@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Javascript Arrow Function</title>
+    </head>
+    <body>
+        <script>
+            /*
+            function calculate(max){
+                let result = 0;
+                let num = 1;
+                while(num <= max){
+                    result += num;
+                    num ++;
+                }
+                //console.log(result);
+                return result;
+            }
+            let sum1 = calculate(10);
+            let sum2 = calculate(20);
+            console.log(sum1, sum2);
+            */
+
+            let calculate = (max) =>{
+                let result = 0;
+                let num = 1;
+                while(num <= max){
+                    result += num;
+                    num ++;
+                }
+                //console.log(result);
+                return result;
+            };
+            let sum1 = calculate(10);
+            let sum2 = calculate(20);
+            console.log(sum1, sum2);
+
+            let multiply = (num1, num2) => (num1 * num2);
+            let multiply_result = multiply(3, 4);
+            console.log(multiply_result);
+        </script>
+    </body>
+</html>
