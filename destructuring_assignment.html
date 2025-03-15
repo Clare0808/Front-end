@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Javascript Destructuring Asignment</title>
+    </head>
+    <body>
+        <script>
+            // Array destructuring and assignment
+            let arr = [3, 4, 5];
+            let [n1, n2, n3, n4 = 10] = arr;
+            console.log(n1, n2, n3, n4);
+
+            let m1 = 3;
+            let m2 = 4;
+            [m2, m1] = [m1, m2];
+            console.log(m1, m2);
+
+            // Object destructuring and assignment
+            let obj = {x : 3, y : 4};
+            let {x, y} = obj;
+            console.log(x, y);
+
+            let obj2 = {s : 1, t : 2};
+            let s, t;
+            ({s, t, w = 6} = obj2);
+            console.log(s, t, w);
+
+            let new_x, new_y;
+            ({x : new_x, y : new_y} = obj);
+            console.log(new_x, new_y);
+
+            // integrate the parameter of the function
+            function add(args){
+                console.log(args.num1 + args.num2);
+            }
+            add({num1 : 3, num2 : 4});
+
+            function add({num1, num2}){
+                console.log(num1 + num2);
+            }
+            add({num1 : 3, num2 : 4});
+        </script>
+    </body>
+</html>
