@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Javascript Proxy</title>
+    </head>
+    <body>
+        <script>
+            let data = {
+                price : 100, 
+                count : 5
+            };
+
+            /*
+            let proxy = new Proxy(data, {
+                get : function(target, property){
+                    console.log("代理的目標物件", target);
+                    console.log("想要取得的屬性名稱", property);
+                    return "屬性對應的資料";
+                }
+            });
+            console.log(proxy.abc);
+            */
+            
+            let proxy = new Proxy(data, {
+                get : function(target, property){
+                    if(property == "total"){
+                        return target.price * target.count;
+                    }else{
+                        return target[property];
+                    }
+                }
+            });
+            console.log(proxy.total);
+            console.log(proxy.price);
+        </script>
+    </body>
+</html>

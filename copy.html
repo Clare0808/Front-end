@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Javascript Copy</title>
+    </head>
+    <body>
+        <script>
+            // Shallow Copy
+            let a = [0, 2, {x : 2, y : 3}];
+            let b = [...a];
+            b[0] = 5;
+            console.log(a[0]);
+            b[2].x = 6;
+            console.log(a[2].x);
+
+            // Deep Copy
+            let n = [0, 2, {s : 2, t : 3}];
+            let m = JSON.parse(JSON.stringify(n));
+            m[2].s = 5;
+            console.log(n[2].s);
+        </script>
+    </body>
+</html>
