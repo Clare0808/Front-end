@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>CSS grid</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+            }
+            .outer{
+                flex: none;
+                display: grid;
+                justify-content: center;
+                grid-template-columns: 30% 30% 30%;
+                grid-template-rows: 300px 300px;
+                background-color: lightblue;
+                width: 30%;
+                height: 50%;
+            }
+            .inner-one{
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 100px 50px;
+                background-color: lightpink;
+                margin: 10px;
+            }
+            .one{
+                background-color: lightsalmon;
+                margin: 10px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="inner-one">
+                <div class="one">One-1</div>
+                <div class="one">One-2</div>
+            </div>
+            <div class="inner">Two</div>
+            <div class="inner">Three</div>
+            <div class="inner">Four</div>
+            <div class="inner">Five</div>
+            <div class="inner">Six</div>
+        </div>
+    </body>
+</html>
