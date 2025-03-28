@@ -165,18 +165,18 @@ body{
 .product-frame{
     display: none;
     justify-content: center;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 60% 60%;
+    grid-template-columns: repeat(3, 25%);
+    grid-template-rows: repeat(2, 60%);
     width: 100%;
     margin-top: 4%;
-    
+    gap: 5%;
 }
 .flower{
     display: grid;
     justify-content: center;
     grid-template-columns: 100%;
     grid-template-rows: 65% 7% 10% 10%;
-    margin: 5%;
+    
 }
 .item{
     width: 100%;
@@ -385,8 +385,8 @@ body{
         font-size: 30px;
     }
     .product-frame{
-        grid-template-columns: 40% 40%;
-        grid-template-rows: 40% 40% 40%;
+        grid-template-columns: repeat(2, 40%);
+        grid-template-rows: repeat(3, 40%);
     }
     .name{
         font-size: 25px;
@@ -476,7 +476,8 @@ body{
     }
     .product-frame{
         grid-template-columns: 60%;
-        grid-template-rows: 20% 20% 20% 20% 20% 20%;
+        grid-template-rows: repeat(6, 20%);
+        gap: 0;
     }
     .name{
         font-size: 20px;
